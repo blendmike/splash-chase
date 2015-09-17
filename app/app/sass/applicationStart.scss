@@ -1,0 +1,136 @@
+@import "variables.scss";
+
+.application-start{
+  .body-background{
+
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:url(../img/splash-background.jpg) no-repeat;
+    background-size:cover;
+    background-position:0 100px;  
+    //body background media queries 
+    @media (min-width: $xlarge) {
+      background-position:0 180px;  
+    }
+    @media (min-width: $large) {
+      background-position:0 200px;  
+    }
+    @media (min-width: $medium) {
+      background-position:0 125px;  
+    }
+    @media (min-width: $small) {
+      background-position:0 140px;  
+    }
+    @media (min-width: $mobile) {
+      background-position:0 200px;  
+    }
+
+  }
+
+  header{
+    text-align: center;
+    width:100%;
+    .logo{
+          //logo media queries 
+          @media (min-width: $xlarge) {
+             width:312px;
+             margin-top:160px;
+             margin-bottom:32px;
+          }
+          @media (min-width: $large) {
+             width:250px;
+             margin-top:112px;
+             margin-bottom:24px;
+          }
+          @media (min-width: $medium) {
+             width:232px;
+             margin-top:43px;
+             margin-bottom:17px;
+          }
+          @media (min-width: $small) {
+             width:232px;
+             margin-top:43px;
+             margin-bottom:15px;
+          }
+          @media (max-width: $mobile) {
+             margin-top:54px;
+             width:50%;
+             margin-bottom:30px;
+          }
+    }
+    h1{
+          @media (min-width: $xlarge) {
+            font-size:54px;
+            margin-bottom:58px;
+          }
+          @media (min-width: $large) {
+            font-size:46px;
+            margin-bottom:51px;
+          }
+          @media (min-width: $medium) {
+            font-size:32px;
+            margin-bottom:37px;            
+          }
+          @media (min-width: $small) {
+            font-size:32px;
+            margin-bottom:33px;            
+          }
+          @media (max-width: $mobile) {
+            font-size:44px;
+            margin-bottom:57px;
+          }
+    }
+  }
+
+  button{
+    border-radius: 5px;
+    background:#0F5BA7;
+    color:#fff;
+    border:none;
+    padding:15px 50px;
+    font-size: 22px;
+    line-height:25px;
+    outline:none;
+          //button media queries 
+          @media (min-width: $xlarge) {
+            width:340px;
+          }
+          @media (min-width: $large) {
+            width:280px;
+          }
+          @media (min-width: $medium) {
+            width:235px;
+          }
+          @media (min-width: $small) {
+            width:235px;
+          }
+          @media (max-width: $mobile) {
+            width:80%
+          }
+  }
+
+  footer{
+    background:url(../img/bottom-background.png) no-repeat;
+    background-size:100%;
+    background-position:0 bottom;  
+    position: fixed;
+    bottom:0;
+    width:100%;
+    height:80%;
+          //footer media queries 
+          @media (min-width: $xlarge) {
+          }
+          @media (min-width: $large) {
+          }
+          @media (min-width: $medium) {
+          }
+          @media (min-width: $small) {
+          }
+          @media (min-width: $mobile) {
+          }
+
+  }
+}

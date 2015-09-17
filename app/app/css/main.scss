@@ -1,0 +1,13 @@
+// Tools and Utilities
+@import "partials/normalize";
+
+// Bower Components
+@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import url("../bower_components/flexslider/flexslider.css");
+
+// Partials
+@import "partials/animations";
+@import "partials/base";
+@import "partials/typography";
+@import "partials/buttons";
+@import "partials/layout";
