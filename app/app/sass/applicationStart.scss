@@ -1,6 +1,19 @@
 @import "variables.scss";
 
 .application-start{
+  .gradient-top{
+    background: rgba(255,255,255,1);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 62%, rgba(255,255,255,0) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(1%, rgba(255,255,255,1)), color-stop(62%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 62%, rgba(255,255,255,0) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 62%, rgba(255,255,255,0) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 62%, rgba(255,255,255,0) 100%);
+background: linear-gradient(to bottom, rgba(255,255,255,1) 1%, rgba(255,255,255,1) 62%, rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', endColorstr='#ffffff', GradientType=0 );
+    height:300px;
+    width:100%;
+    position: fixed;
+  }
   .body-background{
 
     position: fixed;
@@ -10,77 +23,84 @@
     height:100%;
     background:url(../img/splash-background.jpg) no-repeat;
     background-size:cover;
-    background-position:0 100px;  
+    background-position:0 top;  
     //body background media queries 
     @media (min-width: $xlarge) {
-      background-position:0 180px;  
     }
-    @media (min-width: $large) {
-      background-position:0 200px;  
+    @media (min-width: $large) and (max-width : $xlarge) {
+      
     }
-    @media (min-width: $medium) {
-      background-position:0 125px;  
+    @media (min-width: $medium) and (max-width : $large) {
+
     }
-    @media (min-width: $small) {
-      background-position:0 140px;  
+    @media (min-width: $small) and (max-width : $medium) {
+
     }
-    @media (min-width: $mobile) {
-      background-position:0 200px;  
+    @media (min-width: $mobile) and (max-width : $small) {
+
     }
 
   }
 
   header{
     text-align: center;
+    position:fixed;
     width:100%;
     .logo{
           //logo media queries 
           @media (min-width: $xlarge) {
              width:312px;
-             margin-top:160px;
+             margin-top:145px;
              margin-bottom:32px;
           }
-          @media (min-width: $large) {
+          @media (min-width: $large) and (max-width : $xlarge) {
              width:250px;
              margin-top:112px;
              margin-bottom:24px;
           }
-          @media (min-width: $medium) {
+          @media (min-width: $medium) and (max-width : $large) {
              width:232px;
              margin-top:43px;
              margin-bottom:17px;
           }
-          @media (min-width: $small) {
+          @media (min-width: $small) and (max-width : $medium) {
              width:232px;
              margin-top:43px;
              margin-bottom:15px;
           }
-          @media (max-width: $mobile) {
+          @media (max-width: $mobile) and (max-width : $small) {
              margin-top:54px;
              width:50%;
              margin-bottom:30px;
           }
     }
     h1{
+        font-family: $whitney;
+        font-weight: 500;
+        color:#443F3F;
+        line-height:62px;
+        margin-top:0;
           @media (min-width: $xlarge) {
-            font-size:54px;
+            font-size:48px;
             margin-bottom:58px;
           }
-          @media (min-width: $large) {
+          @media (min-width: $large) and (max-width : $xlarge) {
             font-size:46px;
             margin-bottom:51px;
           }
-          @media (min-width: $medium) {
+          @media (min-width: $medium) and (max-width : $large) {
             font-size:32px;
             margin-bottom:37px;            
           }
-          @media (min-width: $small) {
+          @media (min-width: $small) and (max-width : $medium) {
             font-size:32px;
             margin-bottom:33px;            
           }
-          @media (max-width: $mobile) {
-            font-size:44px;
-            margin-bottom:57px;
+          @media (max-width: $mobile) and (max-width : $small) {
+            font-size:36px;
+            padding:0 20px;
+            line-height:48px;
+            margin-bottom:48px;
           }
     }
   }
@@ -98,22 +118,57 @@
           @media (min-width: $xlarge) {
             width:340px;
           }
-          @media (min-width: $large) {
+          @media (min-width: $large) and (max-width : $xlarge) {
             width:280px;
           }
-          @media (min-width: $medium) {
+          @media (min-width: $medium) and (max-width : $large) {
             width:235px;
           }
-          @media (min-width: $small) {
+          @media (min-width: $small) and (max-width : $medium) {
             width:235px;
           }
-          @media (max-width: $mobile) {
+          @media (max-width: $mobile) and (max-width : $small) {
             width:80%
           }
   }
 
+  .device{
+      background:url(../img/laptop.png) no-repeat;
+      background-position:center bottom;
+      color:#fff;
+      width:100%;
+
+      display: block;
+      position: fixed;
+      height:92%;
+      top:0;
+      z-index: 999;
+      background-size:40%;
+
+      
+          @media (min-width: $xlarge) {
+            background-size:42%;
+          }
+          @media (min-width: $large) and (max-width : $xlarge) {
+            background-size:52%;
+            
+          }
+          @media (min-width: $medium) and (max-width : $large) {
+            background-size:52%;
+          }
+          @media (min-width: $small) and (max-width : $medium) {
+           background-size:52%;
+
+          }
+          @media (max-width: $mobile) and (max-width : $small) {
+            height:95%;
+            background-size:110%;
+          }
+
+  }
+
   footer{
-    background:url(../img/bottom-background.png) no-repeat;
+    background:url(../img/table.png) no-repeat;
     background-size:100%;
     background-position:0 bottom;  
     position: fixed;
@@ -123,13 +178,19 @@
           //footer media queries 
           @media (min-width: $xlarge) {
           }
-          @media (min-width: $large) {
+          @media (min-width: $large) and (max-width : $xlarge) {
+                background-size:120%;
+
           }
-          @media (min-width: $medium) {
+          @media (min-width: $medium) and (max-width : $large) {
+                background-size:125%;
+
           }
-          @media (min-width: $small) {
+          @media (min-width: $small) and (max-width : $medium) {
+                background-size:130%;
           }
-          @media (min-width: $mobile) {
+          @media (max-width: $mobile) {
+                background-size:265%;
           }
 
   }

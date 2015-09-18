@@ -1,3 +1,16 @@
+.application-start .gradient-top {
+  background: white;
+  background: -moz-linear-gradient(top, white 1%, white 62%, rgba(255, 255, 255, 0) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(1%, white), color-stop(62%, white), color-stop(100%, rgba(255, 255, 255, 0)));
+  background: -webkit-linear-gradient(top, white 1%, white 62%, rgba(255, 255, 255, 0) 100%);
+  background: -o-linear-gradient(top, white 1%, white 62%, rgba(255, 255, 255, 0) 100%);
+  background: -ms-linear-gradient(top, white 1%, white 62%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, white 1%, white 62%, rgba(255, 255, 255, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff00ff', endColorstr='#ffffff', GradientType=0 );
+  height: 300px;
+  width: 100%;
+  position: fixed;
+}
 .application-start .body-background {
   position: fixed;
   top: 0;
@@ -6,100 +19,85 @@
   height: 100%;
   background: url(../img/splash-background.jpg) no-repeat;
   background-size: cover;
-  background-position: 0 100px;
-}
-@media (min-width: 2560px) {
-  .application-start .body-background {
-    background-position: 0 180px;
-  }
-}
-@media (min-width: 1920px) {
-  .application-start .body-background {
-    background-position: 0 200px;
-  }
-}
-@media (min-width: 1280px) {
-  .application-start .body-background {
-    background-position: 0 125px;
-  }
-}
-@media (min-width: 1024px) {
-  .application-start .body-background {
-    background-position: 0 140px;
-  }
-}
-@media (min-width: 720px) {
-  .application-start .body-background {
-    background-position: 0 200px;
-  }
+  background-position: 0 top;
 }
 .application-start header {
   text-align: center;
+  position: fixed;
   width: 100%;
 }
 @media (min-width: 2560px) {
   .application-start header .logo {
     width: 312px;
-    margin-top: 160px;
+    margin-top: 145px;
     margin-bottom: 32px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1920px) and (max-width: 2560px) {
   .application-start header .logo {
     width: 250px;
     margin-top: 112px;
     margin-bottom: 24px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .application-start header .logo {
     width: 232px;
     margin-top: 43px;
     margin-bottom: 17px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
   .application-start header .logo {
     width: 232px;
     margin-top: 43px;
     margin-bottom: 15px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 720px) and (max-width: 1024px) {
   .application-start header .logo {
     margin-top: 54px;
     width: 50%;
     margin-bottom: 30px;
   }
 }
+.application-start header h1 {
+  font-family: "Whitney-Book", sans-serif;
+  font-weight: 500;
+  color: #443F3F;
+  line-height: 62px;
+  margin-top: 0;
+}
 @media (min-width: 2560px) {
   .application-start header h1 {
-    font-size: 54px;
+    font-size: 48px;
     margin-bottom: 58px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1920px) and (max-width: 2560px) {
   .application-start header h1 {
     font-size: 46px;
     margin-bottom: 51px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .application-start header h1 {
     font-size: 32px;
     margin-bottom: 37px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
   .application-start header h1 {
     font-size: 32px;
     margin-bottom: 33px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 720px) and (max-width: 1024px) {
   .application-start header h1 {
-    font-size: 44px;
-    margin-bottom: 57px;
+    font-size: 36px;
+    padding: 0 20px;
+    line-height: 48px;
+    margin-bottom: 48px;
   }
 }
 .application-start button {
@@ -117,34 +115,92 @@
     width: 340px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 1920px) and (max-width: 2560px) {
   .application-start button {
     width: 280px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1280px) and (max-width: 1920px) {
   .application-start button {
     width: 235px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1280px) {
   .application-start button {
     width: 235px;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 720px) and (max-width: 1024px) {
   .application-start button {
     width: 80%;
   }
 }
+.application-start .device {
+  background: url(../img/laptop.png) no-repeat;
+  background-position: center bottom;
+  color: #fff;
+  width: 100%;
+  display: block;
+  position: fixed;
+  height: 92%;
+  top: 0;
+  z-index: 999;
+  background-size: 40%;
+}
+@media (min-width: 2560px) {
+  .application-start .device {
+    background-size: 42%;
+  }
+}
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .application-start .device {
+    background-size: 52%;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .application-start .device {
+    background-size: 52%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .application-start .device {
+    background-size: 52%;
+  }
+}
+@media (max-width: 720px) and (max-width: 1024px) {
+  .application-start .device {
+    height: 95%;
+    background-size: 110%;
+  }
+}
 .application-start footer {
-  background: url(../img/bottom-background.png) no-repeat;
+  background: url(../img/table.png) no-repeat;
   background-size: 100%;
   background-position: 0 bottom;
   position: fixed;
   bottom: 0;
   width: 100%;
   height: 80%;
+}
+@media (min-width: 1920px) and (max-width: 2560px) {
+  .application-start footer {
+    background-size: 120%;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1920px) {
+  .application-start footer {
+    background-size: 125%;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .application-start footer {
+    background-size: 130%;
+  }
+}
+@media (max-width: 720px) {
+  .application-start footer {
+    background-size: 265%;
+  }
 }
 
 body {
@@ -265,6 +321,7 @@ a.active {
 
 h1 .heading-font, h2 .heading-font, h3 .heading-font, h4 .heading-font, h5 .heading-font, h6 .heading-font {
   font-weight: 700;
+  font-family: "Whitney-Book", sans-serif;
 }
 
 .img-centered {
