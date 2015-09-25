@@ -36,21 +36,17 @@
        $location.path('/apply');
       };
 
+
        $scope.transfer = function(){
         $location.path('/transfer');
       };
 
       $scope.overlay = function(){
         
-          $('#modal').toggleClass('on');
+          $('.overlay').toggleClass('on');
+          $('.application-start').toggleClass('on');
 
-        setTimeout(function(){
-                $('.loading-bar').toggleClass('active');
-         },1500);
-
-        setTimeout(function(){
-              window.location.replace("https://applyfor.emblem.mortgage/signup");
-         },6500);
+       
       };
 
     }
