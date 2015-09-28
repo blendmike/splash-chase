@@ -47,6 +47,8 @@
     if( classie.has( overlay, 'open' ) ) {
       classie.remove( overlay, 'open' );
       classie.remove( container, 'overlay-open' );
+      classie.add( container, 'overlay-close' );
+
       classie.add( overlay, 'close' );
       var onEndTransitionFn = function( ev ) {
         if( support.transitions ) {
@@ -63,8 +65,10 @@
       }
     }
     else if( !classie.has( overlay, 'close' ) ) {
+      classie.remove( container, 'overlay-close' );
       classie.add( overlay, 'open' );
       classie.add( container, 'overlay-open' );
+     
     }
   }
 
